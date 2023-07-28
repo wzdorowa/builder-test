@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 
   // Generate the static paths for all pages in Builder
   return {
-    paths: pages.map((page) => `${page.data?.url}`).filter(url => url !== '/' && url !== '/blog'),
+    paths: pages.map((page) => `${page.data?.url}`).filter(url => url !== '/'),
     fallback: 'blocking',
   };
 }
