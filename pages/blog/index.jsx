@@ -8,18 +8,24 @@ const ARTICLES_PER_PAGE = 30;
 
 function Blog({ articles, pageNumber }) {
   return (
-    <div>
-      {articles.map((item, index) => (
-        <Link key={index} href={`/blog/${item.data.handle}`}>
-          <div className="article">
-            <div className="article-img">
-              <img src={item.data.image} />
+    <div className="articles-wrapper">
+      <h1 className="blog-title">Blog</h1>
+      <div className="articles-container">
+        {articles.map((item, index) => (
+          <Link key={index} href={`/blog/${item.data.handle}`}>
+            <div className="article">
+              <div className="article-img">
+                <img src={item.data.image} />
+              </div>
+              <div className="article-bottom">
+                <span className="article-title">{item.data.title}</span>
+                <span className="article-description">{item.data.blurb}</span>
+              </div>
+              
             </div>
-            {item.data.title}
-            {item.data.blurb}
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
       <div className="pagination">
         {pageNumber > 1 && (
           <a href={`/blog/page/${pageNumber - 1}`}>
