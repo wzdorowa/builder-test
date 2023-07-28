@@ -115,12 +115,12 @@ a {
   width: 300px;
   height: 200px;
   display: block;
+}
 
-  img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-  }
+.article-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .pagination {
