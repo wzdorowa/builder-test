@@ -11,16 +11,16 @@ function Blog({ articles, pageNumber }) {
     <div>
       {articles.map((item, index) => (
         <Link key={index} href={`/blog/${item.data.handle}`}>
-          <div css={{ overflow: "hidden", width: 300 }}>
-            <div css={{ width: 300, height: 200, display: "block" }}>
+          <div className="article">
+            <div className="article-img">
               <img src={item.data.image} />
             </div>
             {item.data.title}
-            {item.data.description}
+            {item.data.blurb}
           </div>
         </Link>
       ))}
-      <div css={{ padding: 20, width: 300, margin: 'auto', display: 'flex' }}>
+      <div className="pagination">
         {pageNumber > 1 && (
           <a href={`/blog/page/${pageNumber - 1}`}>
             ‹ Previous page

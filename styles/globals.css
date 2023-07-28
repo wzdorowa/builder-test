@@ -105,3 +105,27 @@ a {
     color-scheme: dark;
   }
 }
+
+.article {
+  overflow: hidden;
+  width: 300px;
+}
+
+.article-img {
+  width: 300px;
+  height: 200px;
+  display: block;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.pagination {
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+  display: flex;
+}
