@@ -9,7 +9,8 @@ import React from 'react';
 import Head from "next/head";
 import DefaultErrorPage from "next/error";
 
-builder.init(YOUR_KEY);
+const BUILDER_API_KEY = 'a49cc212e97c429287c2a9fda4e8b890';
+builder.init(BUILDER_API_KEY);
 
 function BlogArticle({ article }) {
   const isPreviewing = useIsPreviewing();
