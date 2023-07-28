@@ -2,7 +2,7 @@ import Link from "next/link";
 import { builder } from "@builder.io/react";
 
 const BUILDER_API_KEY = 'a49cc212e97c429287c2a9fda4e8b890';
-builder.init(BUILDER_API_KEYå);
+builder.init(BUILDER_API_KEY);
 
 const ARTICLES_PER_PAGE = 30;
 
