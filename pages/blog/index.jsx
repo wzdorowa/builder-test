@@ -15,7 +15,7 @@ function Blog({ articles, pageNumber }) {
           <Link key={index} href={`/blog/${item.data.handle}`}>
             <div className="article">
               <div className="article-img">
-                <img src={item.data.image} />
+                <img src={item.data.image}/>
               </div>
               <div className="article-bottom">
                 <span className="article-title">{item.data.title}</span>
